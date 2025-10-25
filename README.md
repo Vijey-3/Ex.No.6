@@ -1,7 +1,7 @@
 # **Ex. No. 6: Development of Python Code Compatible with Multiple AI Tools**
 
-**Date:**
-**Register No.:**
+**Date:25/10/2025**
+**Register No.:212223040239**
 
 ## **Title:**
 
