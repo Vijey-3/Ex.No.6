@@ -1,145 +1,302 @@
-# **Ex. No. 6: Development of Python Code Compatible with Multiple AI Tools**
-
-**Date:25/10/2025**
-**Register No.:212223040239**
-
-## **Title:**
-
-Framing Prompts for AI-Assisted Project Coding
 
 ---
 
-## **Aim:**
+# **Ex.No.6 Development of Python Code Compatible with Multiple AI Tools**
 
-To develop and execute Python code that integrates with multiple AI tools to automate interactions with APIs, compare their outputs, and generate meaningful insights. The experiment focuses on designing structured prompts that help AI tools assist effectively in coding tasks related to project development.
-
----
-
-## **Objective:**
-
-The objective of this experiment is to enable learners to:
-
-1. Understand how to frame effective and clear prompts for AI tools to perform Python coding tasks.
-2. Generate Python scripts that can connect and interact with multiple APIs.
-3. Compare outputs from various APIs and identify differences or similarities.
-4. Interpret results and generate actionable insights or recommendations.
-5. Evaluate and refine prompt quality to improve AI-assisted development outcomes.
+**Date:** 25-10-2025
+**Register No.:** 212223040239
 
 ---
 
-## **Tools and Technologies Required:**
+## **Aim**
 
-* Python 3.x
-* Any AI Code Assistant (ChatGPT, GitHub Copilot, Google Gemini, etc.)
-* Internet access for API integration
-* Libraries: `requests`, `json`, `pandas`, `matplotlib` (if visualization is needed)
+To write and implement a Python program that interacts with multiple AI tools (OpenAI’s GPT and Google’s Gemini) to automate Python code generation, analyze the quality of responses, and derive meaningful insights. The experiment applies the *persona pattern* to instruct the AI models to act as professional programmers for a specific coding task, allowing comparative study of code efficiency, readability, and reliability.
 
 ---
 
-## **AI Tools Used:**
+## **Algorithm**
 
-1. **ChatGPT** – for code generation and explanation.
-2. **Google Gemini / Copilot** – for comparison and alternate code suggestions.
+**Input:** A structured persona-based prompt describing a coding task.
+**Output:** Comparative performance analysis of multiple AI-generated code outputs.
 
----
+**Steps:**
 
-## **Exercise Description:**
+1. Define the AI task to be automated (e.g., text summarization, web scraping, or data visualization).
+2. Frame a **persona-based prompt**, such as *“Act as an expert Python developer. Generate optimized and commented code for…”*
+3. Initialize and authenticate API connections for OpenAI and Google Gemini.
+4. Send the prompt to the first AI model (ChatGPT/GPT-4) and record the generated response.
+5. Send the same prompt to the second AI model (Gemini Pro) and store its output.
+6. Execute or analyze both generated codes for functional correctness.
+7. Compare both outputs for:
 
-In this experiment, instead of manually coding from scratch, students will **design structured prompts** to instruct AI tools in generating Python code for specific tasks.
-The exercise is divided into three stages:
-
-### **Stage 1: Interacting with Multiple APIs**
-
-* The prompt should ask the AI tool to generate Python code that connects to two or more APIs (e.g., weather APIs, news APIs, or currency exchange APIs).
-* The code should fetch and display JSON responses from both sources.
-
-**Example Prompt:**
-
-> "Write a Python script that connects to two public APIs – OpenWeatherMap and WeatherAPI. Fetch the current temperature and weather condition for a given city from both APIs and print the results."
-
----
-
-### **Stage 2: Comparing Outputs from Different APIs**
-
-* The prompt should guide the AI to generate code that compares the responses from both APIs.
-* It should identify differences in values (like temperature, humidity, or description).
-
-**Example Prompt:**
-
-> "Generate a Python program that compares temperature and humidity values retrieved from OpenWeatherMap and WeatherAPI for the same location. Display the difference in values in a tabular format."
+   * Code readability
+   * Accuracy and logic
+   * Adherence to best practices
+   * Error-handling and efficiency
+8. Generate a **comparative report** or table summarizing the findings.
+9. Formulate insights on which AI performs better for the defined use case.
 
 ---
 
-### **Stage 3: Generating Actionable Insights**
+## **AI Tools & Libraries Required**
 
-* The prompt should make the AI analyze differences and suggest insights or next steps.
-* For instance, if the APIs show differing values, the AI can recommend which API seems more reliable or when to recheck the data.
+**AI Models:**
 
-**Example Prompt:**
+* OpenAI GPT-4 or GPT-3.5 Turbo
+* Google Gemini Pro
 
-> "Create Python code that analyzes the difference between two API outputs (weather data) and generates insights like 'API 1 is reporting higher temperature – possible server delay in API 2' or 'Both APIs show similar humidity – data consistency confirmed'."
+**Python Libraries:**
+
+* `openai` → for OpenAI API communication
+* `google-generativeai` → for Gemini API access
+* `requests` → for web requests
+* `beautifulsoup4` → for HTML parsing
+* `os`, `json`, `dotenv` → for configuration and environment variable management
+
+**Software Requirements:**
+
+* Python 3.8 or higher
+* IDE: Visual Studio Code / PyCharm
+* Valid API keys for both OpenAI and Google AI Studio
 
 ---
 
-## **AI-Generated Output (Sample Response):**
+## **Explanation**
+
+### **Introduction**
+
+AI-assisted programming has become an essential skill for modern developers. Tools like ChatGPT and Gemini can generate, refactor, or explain code with minimal input from the user. However, their outputs differ depending on model architecture and training datasets.
+
+This experiment explores how to send identical prompts to multiple AI tools, analyze their code generation behavior, and identify which produces cleaner, more reliable code.
+
+By applying the **persona pattern**, the AI is guided to *think and respond like an expert programmer*, improving the accuracy, structure, and practicality of the generated script.
+
+---
+
+## **Key Concepts**
+
+### 1. **API Integration**
+
+API (Application Programming Interface) allows communication between Python and AI tools. Developers send a prompt as a **JSON request**, and the API responds with **model-generated text/code**.
+
+**Flow:**
+Python → API Request → AI Model → JSON Response → Output Display
+
+---
+
+### 2. **Persona Pattern**
+
+A persona-based prompt defines the *role* the AI should assume.
+Example:
+
+* Generic: “Write a Python code for weather forecasting.”
+* Persona: “Act as a senior Python developer specializing in data science. Write efficient and commented code for weather forecasting using an API.”
+
+This technique enhances output clarity, coding best practices, and contextual relevance.
+
+---
+
+### 3. **Multi-Tool Comparison**
+
+Different AI models produce varied outputs for the same prompt due to internal design differences. Comparing them helps determine:
+
+* Which AI provides better syntax and readability
+* Which handles edge cases more effectively
+* Which offers more maintainable code
+
+---
+
+## **Concept: Persona Pattern 👨‍💻**
+
+The persona pattern transforms simple AI queries into **context-rich instructions**. By giving AI a role, it assumes domain expertise.
+
+Example persona:
+
+> “Act as an experienced Python developer in data scraping and analysis. Write optimized, error-free, and reusable code.”
+
+This ensures consistent, logical, and production-ready outputs.
+
+---
+
+## **Application Scenario**
+
+The assigned task:
+
+> *Develop a Python program that scrapes top news headlines from BBC News ([https://www.bbc.com/news](https://www.bbc.com/news)) using requests and BeautifulSoup.*
+
+This real-world problem involves fetching live web data, making it ideal for evaluating how AI tools handle networking, HTML parsing, and error management.
+
+---
+
+## **Methodology**
+
+1. Define the task clearly in natural language.
+2. Frame a detailed persona-based prompt.
+3. Use a Python controller script to send the same prompt to GPT and Gemini APIs.
+4. Receive and store the generated code from both models.
+5. Execute and test each version for performance and correctness.
+6. Record findings and summarize differences.
+
+---
+
+## **Implementation: Master Python Script**
 
 ```python
-import requests
+import os
+import openai
+import google.generativeai as genai
 
-city = "Chennai"
-api1 = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=YOUR_API_KEY"
-api2 = f"https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q={city}"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-data1 = requests.get(api1).json()
-data2 = requests.get(api2).json()
+openai.api_key = OPENAI_API_KEY
+genai.configure(api_key=GEMINI_API_KEY)
 
-temp1 = data1['main']['temp'] - 273.15
-temp2 = data2['current']['temp_c']
-humidity1 = data1['main']['humidity']
-humidity2 = data2['current']['humidity']
+prompt = """
+Act as an expert Python developer specializing in web scraping.
+Write a complete, efficient Python script that fetches and displays
+the top headlines from BBC News (https://www.bbc.com/news)
+using requests and BeautifulSoup. Include error handling and comments.
+"""
 
-print(f"OpenWeatherMap - Temp: {temp1:.2f}°C, Humidity: {humidity1}%")
-print(f"WeatherAPI - Temp: {temp2:.2f}°C, Humidity: {humidity2}%")
+def get_openai_response(prompt):
+    response = openai.chat.completions.create(
+        model="gpt-4",
+        messages=[{"role": "system", "content": "You are an expert Python programmer."},
+                  {"role": "user", "content": prompt}]
+    )
+    return response.choices[0].message.content.strip()
 
-if abs(temp1 - temp2) > 2:
-    print("Noticeable temperature difference detected between APIs.")
-else:
-    print("Temperature data seems consistent between APIs.")
+def get_gemini_response(prompt):
+    model = genai.GenerativeModel('gemini-pro')
+    response = model.generate_content(prompt)
+    return response.text.strip()
+
+if __name__ == "__main__":
+    print("Fetching responses from both AI tools...\n")
+    gpt_code = get_openai_response(prompt)
+    gemini_code = get_gemini_response(prompt)
+
+    print("\n--- Code by OpenAI GPT ---\n")
+    print(gpt_code)
+    print("\n--- Code by Google Gemini ---\n")
+    print(gemini_code)
 ```
 
 ---
 
-## **Explanation:**
+## **Sample Outputs**
 
-This experiment applies **Prompt Engineering** to guide multiple AI tools in code generation. The same task prompt was tested across two AI platforms (e.g., ChatGPT and Gemini).
+### **Output from ChatGPT**
 
-* **ChatGPT** provided structured and modular Python code with explanations.
-* **Gemini** suggested a similar approach but with different error-handling and data extraction methods.
-  By comparing both outputs, students can evaluate which AI generated more optimized and readable code.
+* Uses specific CSS selectors with `data-testid`
+* Implements `User-Agent` for web scraping safety
+* Employs concise `raise_for_status()` for error handling
 
----
+### **Output from Gemini**
 
-## **Reflection Note:**
-
-Through this experiment, I learned how small changes in prompt phrasing can significantly impact the quality and structure of AI-generated code.
-
-* A well-structured prompt yields clean, modular, and well-commented code.
-* Adding context like “use requests and JSON library” or “display output in tabular form” helps AI produce more relevant code.
-* Comparing outputs from multiple AI tools improves understanding of code diversity and optimization.
-
-In future, I would refine my prompts by specifying constraints such as error handling, API key security, and data visualization for better automation.
+* Uses general HTML selectors with `a.gs-c-promo-heading`
+* Includes timeout handling and specific exceptions
+* Provides detailed console logs and step-by-step process indicators
 
 ---
 
-## **Conclusion:**
+## **Analysis and Discussion**
 
-The experiment successfully demonstrated how **Prompt Engineering** can be used to instruct AI tools to generate functional and comparable Python code. It highlights the importance of prompt clarity and iterative refinement when using multiple AI systems for software development tasks.
+| Criteria               | ChatGPT (OpenAI GPT)              | Gemini (Google)                               |
+| ---------------------- | --------------------------------- | --------------------------------------------- |
+| **Selector Precision** | Highly specific (uses test IDs)   | Generalized selectors                         |
+| **Error Handling**     | Compact with `raise_for_status()` | Detailed with `Timeout` and `ConnectionError` |
+| **Code Readability**   | More concise and professional     | Verbose but beginner-friendly                 |
+| **Best Practice**      | Adds `User-Agent`                 | Adds `timeout`                                |
+| **Execution Speed**    | Fast due to minimal checks        | Slightly slower but more robust               |
+| **Output Clarity**     | Cleanly formatted headlines       | Descriptive with extra logs                   |
+
+Both tools followed professional coding practices but displayed unique priorities: ChatGPT prioritized clean structure, while Gemini focused on stability and user awareness.
+
+---
+
+## **Flowchart**
+
+```
++------------------+
+|  Define Prompt   |
++------------------+
+         |
+         v
++----------------------+
+| Send Prompt to GPT   |
++----------------------+
+         |
+         v
++----------------------+
+| Send Prompt to Gemini|
++----------------------+
+         |
+         v
++----------------------------+
+| Collect and Compare Outputs|
++----------------------------+
+         |
+         v
++--------------------+
+| Generate Insights  |
++--------------------+
+```
+
+---
+
+## **Applications**
+
+* **Software Development:** Auto-generate boilerplate or repetitive code.
+* **Data Analysis:** Compare NLP outputs (summarization, classification).
+* **Education:** Teach AI model behavior and coding styles.
+* **Research:** Evaluate AI consistency across coding tasks.
+
+---
+
+## **Limitations**
+
+* Requires stable internet and valid API keys.
+* Model outputs may vary across executions.
+* Some AI tools lack strict persona adherence.
+* Paid APIs can be cost-prohibitive for extended testing.
+
+---
+
+## **Future Enhancements**
+
+* Include third AI models (e.g., Claude, Cohere).
+* Add visual charts comparing execution time and accuracy.
+* Automate performance scoring metrics (e.g., runtime, lines of code).
+* Create a unified dashboard for real-time AI comparison.
+
+---
+
+## **Deliverables**
+
+* Python script for multi-AI integration.
+* AI-generated codes (OpenAI & Gemini).
+* Comparative analysis table.
+* Insights on persona-based prompt effectiveness.
+
+---
+
+## **Conclusion**
+
+This experiment successfully demonstrates the power of **Prompt Engineering** in AI-assisted programming.
+By using persona-based prompts and integrating multiple AI APIs, we achieved:
+
+* Comparative understanding of AI-generated coding styles.
+* Insight into best practices (headers, timeouts, error handling).
+* Automation of coding and evaluation tasks.
+
+It proves that developers now play a *supervisory and integrative role* — refining, validating, and merging the best outputs from various AI models to create optimal software solutions.
 
 ---
 
 ## **Result:**
 
-The corresponding prompts were executed successfully, and the Python code integrating multiple APIs was generated and analyzed using multiple AI tools.
+Thus, the **Development of Python Code Compatible with Multiple AI Tools** was successfully executed and analyzed.
 
 ---
-
